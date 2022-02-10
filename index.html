@@ -4,15 +4,25 @@
         <title>Alarm Clock of Doom</title>
         <meta author="chadcooper06">
         <meta charset="utf-8">
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1">
         <link rel="stylesheet" href="css/style.css">
         </head>
 
         <body>
-            <div id = "digital-clock">
-                
 
-                <button class = "set">Set Alarm</button>
-                <button class = "end">End Alarm</button>
+            <div class = "container">
+                <div id = "digital-clock">
+                
+                    <input id = "alarm" type = "datetime-local">
+                    
+                    <div id = "buttons">
+
+                        <button class = "set">Set Alarm</button>
+                        <button class = "end">End Alarm</button>
+                
+                    </div>
+                
+                </div>
             </div>
 
             <script src = "js/main.js"></script>
