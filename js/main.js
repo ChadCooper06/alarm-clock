@@ -1,6 +1,6 @@
-const display = document.getElementById("digital-clock");
+const display = document.getElementById("digitalClock");
 
-function updateTime() {
+function digitalClock() {
 
     let date = new date ();
     let meridian = "AM";
@@ -18,7 +18,7 @@ function updateTime() {
 
     display.innerText = `${hour} : ${minutes} : ${seconds}`;    
     
-    setInterval(updateTime, 1000);
+    setInterval(digitalClock, 1000);
 };
 
 
@@ -39,4 +39,4 @@ function endAlarm() {
 setAlarm.addEventListener('click', event => output.textContent = "Alarm set");
 endAlarm.addEventListener('click', event => output.textContent = "Alarm ended");
 
-updateTime();
+digitalClock();
