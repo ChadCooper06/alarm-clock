@@ -37,7 +37,4 @@ function setAlarm(value) {
 function endAlarm() {
 };
 
-setAlarm.addEventListener('click', event => output.textContent = "Alarm set");
-endAlarm.addEventListener('click', event => output.textContent = "Alarm ended");
-
-digitalClock();
+alarmClock();
