@@ -1,24 +1,25 @@
-function digitalClock() {
+const display = document.getElementById("alarmClock");
 
-    let date = new date ();
+function updateTime() {
 
-    var hour = date.getHours();
-    var minutes = date.getMinutes();
-    var seconds = date.getSeconds();
+    let date = new Date ();
 
-    let meridian = "AM";
+    const hour = date.getHours();
+    const minutes = date.getMinutes();
+    const seconds = date.getSeconds();
+
+    const period = "AM";
     if (hour == 0) hour = 12;
     
     if (hour > 12) {
         hour = hour - 12;
-        meridian = "PM";
+        period = "PM";
     }
 
-
-    let time = `${hour} : ${minutes} : ${seconds} ${meridian}`;    
+    display.innerText = `${hour} : ${minutes} : ${seconds} ${period}`;
     
-    setInterval(digitalClock, 1000);
-    document.getElementById("digitalClock").innertext = time;
+    setInterval(updateTime, 1000);
+
 };
 
 

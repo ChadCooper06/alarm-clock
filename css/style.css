@@ -1,20 +1,22 @@
-body {
+body, html {
     background-color: black;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.digital-clock {
-    background-color: #523333;
+.container {
     display: flex;
-    font-family: monospace;
-    font-size: 10vw;
-    color: rgb(0, 255, 0);
     justify-content: center;
-    height: 100vh;
-    width: 100%;
+    min-height: 100vh;
+    flex-direction: row;
     align-items: center;
+}
+
+#alarmClock {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 10vw;
+    color: rgb(0,255,0);
 }
 
 .buttons {
@@ -23,8 +25,7 @@ body {
 }
 
 button {
-    border: 1px solid rgb(217, 218, 211) line;
-    border-radius: 20px;
+    border-radius: 5px;
     background-color: rgb(236, 44, 44);
     font-size: 18px;
     display: inline-block;
