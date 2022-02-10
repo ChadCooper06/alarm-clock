@@ -2,8 +2,8 @@ const display = document.getElementById("digital-clock");
 
 function updateTime() {
 
-    var date = new date;
-    var meridian = "" ;
+    let date = new date ();
+    let meridian = "" ;
 
     if (hour >= 12) {
       meridian = "PM";  
@@ -29,7 +29,13 @@ function formatTime(time) {
 
 function setAlarm(value) {
     setAlarm = value;
+}
+
+function endAlarm() {
     
 }
+
+setAlarm.addEventListener('click', event => output.textContent = "Alarm set");
+endAlarm.addEventListener('click', event => output.textContent = "Alarm ended");
 
 updateTime();

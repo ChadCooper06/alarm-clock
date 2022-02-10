@@ -1,28 +1,30 @@
 body {
     background-color: black;
-    font-size: larger;
-    font-family: monospace;
-    text-decoration-color: rgb(0, 255, 0);
-}
-
-* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 .container {
     display: flex;
-    width: 85%;
-    height: fit-content;
+    width: 100%;
+    height: 100%;
     padding: 5% 5%;
     justify-content: center;
     align-items: center;
+    font-size: 45px;
 }
 
 .digital-clock {
     background-color: #523333;
+    display: flex;
     font-family: monospace;
     font-size: 10vw;
-    text-decoration-color: aquamarine;
+    color: rgb(0, 255, 0);
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
 }
 
 .buttons {
