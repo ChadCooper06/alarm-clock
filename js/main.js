@@ -3,19 +3,20 @@ const display = document.getElementById("digital-clock");
 function updateTime() {
 
     let date = new date ();
-    let meridian = "" ;
+    let meridian = "AM";
 
-    if (hour >= 12) {
-      meridian = "PM";  
-    } else {
-        meridian = "AM";
+    if (hour == 0) hour = 12;
+    
+    if (hour > 12) {
+        hour = hour - 12;
+        meridian = "PM";
     }
 
     var hour = formatTime(date.getHours());
     var minutes = formatTime(date.getMinutes());
     var seconds = formatTime(date.getSeconds());
 
-    display.innerText = `${hour} : ${minutes} : ${seconds} : ${meridian}`;    
+    display.innerText = `${hour} : ${minutes} : ${seconds}`;    
 }
 
 setInterval(updateTime, 1000);
@@ -32,7 +33,6 @@ function setAlarm(value) {
 }
 
 function endAlarm() {
-    
 }
 
 setAlarm.addEventListener('click', event => output.textContent = "Alarm set");
