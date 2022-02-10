@@ -17,23 +17,24 @@ function updateTime() {
     var seconds = formatTime(date.getSeconds());
 
     display.innerText = `${hour} : ${minutes} : ${seconds}`;    
-}
+    
+    setInterval(updateTime, 1000);
+};
 
-setInterval(updateTime, 1000);
 
 function formatTime(time) {
     if (time < 10) {
         return 0 + time;
     }
     return time;
-} 
+}; 
 
 function setAlarm(value) {
     setAlarm = value;
-}
+};
 
 function endAlarm() {
-}
+};
 
 setAlarm.addEventListener('click', event => output.textContent = "Alarm set");
 endAlarm.addEventListener('click', event => output.textContent = "Alarm ended");
