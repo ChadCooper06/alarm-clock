@@ -1,6 +1,18 @@
 body {
-    background-color: #583a3a;
+    background-color: #523333;
     font-size: larger;
     font-family: monospace;
     text-decoration-color: rgb(0, 255, 0);
+}
+
+button {
+    border: 1px solid black line;
+    border-radius: 20px;
+    background-color: rgb(236, 44, 44);
+    font-size: 18px;
+    display: inline-block;
+}
+
+button:hover {
+    background-color:rgb(63, 63, 241);
 }
