@@ -10,6 +10,7 @@ div {
     width: 85%;
     height: fit-content;
     padding: 5% 5%;
+    align-content: center;
 }
 
 button {
