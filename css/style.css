@@ -5,6 +5,13 @@ body {
     text-decoration-color: rgb(0, 255, 0);
 }
 
+div {
+    display: block;
+    width: 85%;
+    height: fit-content;
+    padding: 5% 5%;
+}
+
 button {
     border: 1px solid black line;
     border-radius: 20px;
