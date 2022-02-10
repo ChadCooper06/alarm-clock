@@ -19,14 +19,16 @@ body {
 }
 
 .buttons {
-    margin-top: 12px;
+    margin-top: 20px;
 }
+
 button {
     border: 1px solid rgb(217, 218, 211) line;
     border-radius: 20px;
     background-color: rgb(236, 44, 44);
     font-size: 18px;
     display: inline-block;
+    padding: 3px 6px;
 }
 
 button:hover {
