@@ -1,1 +1,6 @@
-
+body {
+    background-color: #583a3a;
+    font-size: larger;
+    font-family: monospace;
+    text-decoration-color: rgb(0, 255, 0);
+}
