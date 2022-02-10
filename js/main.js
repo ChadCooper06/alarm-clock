@@ -1,7 +1,10 @@
 
 function updateTime() {
-    const date = new date;
-    const merdian = "";
+
+    document.getElementById("digital-clock");
+
+    var date = new date;
+    var merdian = "";
 
     if (hour >= 12) {
       meridian = "PM";  
@@ -10,11 +13,10 @@ function updateTime() {
     }
 }
 
-document.getElementById("digital-clock");
 
-const hour = formatTime(date.getHours());
-const minutes = formatTime(date.getMinutes());
-const seconds = formatTime(date.getSeconds());
+var hour = formatTime(date.getHours());
+var minutes = formatTime(date.getMinutes());
+var seconds = formatTime(date.getSeconds());
 
 function formatTime(time) {
     if (time < 10) {
