@@ -1,7 +1,6 @@
+const display = document.getElementById("digital-clock");
 
 function updateTime() {
-
-    document.getElementById("digital-clock");
 
     var date = new date;
     var merdian = "";
@@ -16,11 +15,10 @@ function updateTime() {
     var minutes = formatTime(date.getMinutes());
     var seconds = formatTime(date.getSeconds());
 
-    display.innerText = `${hour} : ${minutes} : {seconds}`;
-
-    setInterval(updateTime, 1000);
+    display.innerText = `${hour} : ${minutes} : ${seconds}`;    
 }
 
+setInterval(updateTime, 1000);
 
 function formatTime(time) {
     if (time < 10) {
