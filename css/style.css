@@ -21,6 +21,7 @@ body {
 .digital-clock {
     background-color: #523333;
     font-size: 10vw;
+    text-decoration-color: aquamarine;
 }
 
 .buttons {
