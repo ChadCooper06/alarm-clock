@@ -3,7 +3,7 @@ const display = document.getElementById("digital-clock");
 function updateTime() {
 
     var date = new date;
-    var merdian = "";
+    var meridian = "" ;
 
     if (hour >= 12) {
       meridian = "PM";  
@@ -15,7 +15,7 @@ function updateTime() {
     var minutes = formatTime(date.getMinutes());
     var seconds = formatTime(date.getSeconds());
 
-    display.innerText = `${hour} : ${minutes} : ${seconds}`;    
+    display.innerText = `${hour} : ${minutes} : ${seconds} : ${meridian}`;    
 }
 
 setInterval(updateTime, 1000);
