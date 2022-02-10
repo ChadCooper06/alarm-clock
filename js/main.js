@@ -16,7 +16,7 @@ function updateTime() {
         period = "PM";
     }
 
-    display.innerText = `${hour} : ${minutes} : ${seconds} ${period}`;
+    display.innerText = `${hour} : ${minutes} : ${seconds} : ${period}`;
     
     setInterval(updateTime, 1000);
 
