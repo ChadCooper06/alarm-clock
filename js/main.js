@@ -29,6 +29,7 @@ function formatTime(time) {
 
 function setAlarm(value) {
     setAlarm = value;
+    
 }
 
 updateTime();

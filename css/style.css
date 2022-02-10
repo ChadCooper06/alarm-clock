@@ -14,18 +14,20 @@ body {
     width: 85%;
     height: fit-content;
     padding: 5% 5%;
-    align-content: center;
+    justify-content: center;
     align-items: center;
 }
 
 .digital-clock {
     background-color: #523333;
+    font-family: monospace;
     font-size: 10vw;
     text-decoration-color: aquamarine;
 }
 
 .buttons {
     margin-top: 20px;
+    padding: 8px;
 }
 
 button {
