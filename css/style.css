@@ -5,12 +5,17 @@ body {
     text-decoration-color: rgb(0, 255, 0);
 }
 
+* {
+    box-sizing: border-box;
+}
+
 .container {
-    display: block;
+    display: flex;
     width: 85%;
     height: fit-content;
     padding: 5% 5%;
     align-content: center;
+    align-items: center;
 }
 
 .digital-clock {
