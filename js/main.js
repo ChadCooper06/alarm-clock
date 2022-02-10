@@ -1,5 +1,3 @@
-const display = document.getElementById("digitalClock");
-
 function digitalClock() {
 
     let date = new date ();
