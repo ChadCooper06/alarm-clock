@@ -3,8 +3,12 @@ const display = document.getElementById("digitalClock");
 function digitalClock() {
 
     let date = new date ();
-    let meridian = "AM";
 
+    var hour = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
+
+    let meridian = "AM";
     if (hour == 0) hour = 12;
     
     if (hour > 12) {
@@ -12,13 +16,11 @@ function digitalClock() {
         meridian = "PM";
     }
 
-    var hour = formatTime(date.getHours());
-    var minutes = formatTime(date.getMinutes());
-    var seconds = formatTime(date.getSeconds());
 
-    display.innerText = `${hour} : ${minutes} : ${seconds}`;    
+    let time = `${hour} : ${minutes} : ${seconds} ${meridian}`;    
     
     setInterval(digitalClock, 1000);
+    document.getElementById("digitalClock").innertext = time;
 };
 
 
