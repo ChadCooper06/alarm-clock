@@ -1,26 +1,19 @@
-const display = document.getElementById("alarmClock");
+const display = document.getElementById('clock');
+const audio = new Audio('https://onlineclock.net/audio/options/default.mp3');
+audio.loop = true;
+let alarmTime = null;
+let alarmTimeout = null;
 
 function updateTime() {
 
-    let date = new Date ();
+    const date = new Date();
 
     const hours = formatTime(date.getHours());
     const minutes = formatTime(date.getMinutes());
     const seconds = formatTime(date.getSeconds());
 
-    display.innerText = `${hours} : ${minutes} : ${seconds} : ${period}`;
 
-}
-
-function setPeriod () {
-
-    const period = "AM";
-    if (hours == 0) hours = 12;
-
-    if (hours > 12) {
-        hours = hours - 12;
-        period = "PM";
-    }
+    display.innerText = `${hours}:${minutes}:${seconds}`;
 }
 
 function formatTime(time) {
@@ -30,11 +23,30 @@ function formatTime(time) {
     return time;
 }
 
-function setAlarm(value) {
-    setAlarm = value;
+function setAlarmTime(value) {
+    alarmTime = value;
+}
+
+function setAlarm() {
+    if (alarmTime) {
+
+        const current = new Date();
+        const timeToAlarm = new Date(alarmTime);
+
+        if (timeToAlarm > current) {
+            const timeout = timeToAlarm.getTime() - current.getTime();
+            alarmTimeout = setTimeout(() => audio.play(), timeout);
+            alert('Alarm Set');
+        }
+    }
 }
 
 function endAlarm() {
+    audio.pause();
+    if (alarmTimeout) {
+        clearTimeout(alarmTimeout);
+        alert('Alarm Off');
+    }
 }
 
 setInterval(updateTime, 1000);
