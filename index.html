@@ -2,35 +2,34 @@
 <html lang="en">
 
     <head>
-        <meta author="chadcooper06">
+        <meta author = "chadcooper06">
         <meta charset="utf-8">
-        <meta name = "viewport" content = "width = device-width, initial-scale = 1">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="clock.css">
+        <title>Clock</title>
 
-        <title>Alarm Clock</title>
-        <link rel="stylesheet" href="css/style.css">
-        
     </head>
 
         <body>
 
             <section class = "container">
-                <div id = "alarmClock">
-                </div>
-            
-                    <input onchange = "setAlarm(value)" name = "alarmTime" type = "datetime-local">
-                    
-                    <div class = "buttons">
+                <div id = "clock"></div>
 
-                        <button class = "set-alarm">Set Alarm</button>
-                        <button class = "end-alarm">End Alarm</button>
+                <div>
+                    <input onchange = "setAlarmTime(this.value)" name = "alarmTime" type = "datetime-local">
+                    
+                    <div class="controls">
+
+                        <button onclick="setAlarm()" class="set-alarm">Set Alarm</button>
+                        <button onclick="endAlarm()" class="end-alarm">End Alarm</button>
                 
                     </div>
+                </div>
             </section>
 
-            <script src = "js/main.js"></script>
+            <script src = "clock.js"></script>
 
         </body>
 </html>
